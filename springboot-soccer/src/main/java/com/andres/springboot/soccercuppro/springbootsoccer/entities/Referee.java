@@ -13,15 +13,6 @@ public class Referee {
     private String name;
     private String country;
 
-    public Referee() {
-    }
-
-    public Referee(Long idReferee, String name, String country) {
-        this.idReferee = idReferee;
-        this.name = name;
-        this.country = country;
-    }
-
     public Long getIdReferee() {
         return idReferee;
     }
@@ -46,11 +37,5 @@ public class Referee {
         this.country = country;
     }
 
-    @Override
-    public String toString() {
-        return
-                "id=" + idReferee +
-                ", name='" + name + '\'' +
-                ", country='" + country + '\'';
-    }
+
 }

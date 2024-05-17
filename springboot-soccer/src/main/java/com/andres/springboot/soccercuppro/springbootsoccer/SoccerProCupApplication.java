@@ -10,8 +10,8 @@ import java.util.List;
 public class SoccerProCupApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SoccerProCupApplication.class, args);
 
+		SpringApplication.run(SoccerProCupApplication.class, args);
 
 	}
 

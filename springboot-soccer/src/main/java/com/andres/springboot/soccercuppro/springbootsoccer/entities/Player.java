@@ -18,19 +18,8 @@ public class Player {
     private String Nationality;
 
     @ManyToOne
-    private Team idTeam;
+    private Team team;
 
-    public Player() {
-    }
-
-    public Player(Long idPlayer, String name, String position, Date dateOfBirth, String nationality, Team idTeam) {
-        this.idPlayer = idPlayer;
-        this.name = name;
-        this.position = position;
-        DateOfBirth = dateOfBirth;
-        Nationality = nationality;
-        this.idTeam = idTeam;
-    }
 
     public Long getIdPlayer() {
         return idPlayer;
@@ -72,11 +61,11 @@ public class Player {
         Nationality = nationality;
     }
 
-    public Team getIdTeam() {
-        return idTeam;
+    public Team getTeam() {
+        return team;
     }
 
-    public void setIdTeam(Team idTeam) {
-        this.idTeam = idTeam;
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }

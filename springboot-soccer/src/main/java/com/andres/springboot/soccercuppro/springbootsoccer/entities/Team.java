@@ -13,17 +13,8 @@ public class Team {
     private String name;
     private String country;
     private String coach;
+    private int goal;
 
-
-    public Team() {
-    }
-
-    public Team(Long idTeam, String name, String country, String coach) {
-        this.idTeam = idTeam;
-        this.name = name;
-        this.country = country;
-        this.coach = coach;
-    }
 
     public Long getIdTeam() {
         return idTeam;
@@ -55,5 +46,13 @@ public class Team {
 
     public void setCoach(String coach) {
         this.coach = coach;
+    }
+
+    public int getGoal() {
+        return goal;
+    }
+
+    public void setGoal(int goal) {
+        this.goal = goal;
     }
 }

@@ -1,4 +1,9 @@
 package com.andres.springboot.soccercuppro.springbootsoccer.repositories;
 
-public interface TeamRepository {
+import com.andres.springboot.soccercuppro.springbootsoccer.entities.Match;
+import org.springframework.data.repository.CrudRepository;
+
+public interface TeamRepository extends CrudRepository<Match, Long> {
+
+    
 }

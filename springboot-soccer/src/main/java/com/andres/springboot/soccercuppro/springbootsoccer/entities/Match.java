@@ -2,7 +2,8 @@ package com.andres.springboot.soccercuppro.springbootsoccer.entities;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "matches")
@@ -12,33 +13,21 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMatch;
 
-    private Date date;
-    private Date time;
+    private LocalDate date;
+    private LocalTime time;
 
     @OneToOne
-    private Team homeTeamId;
+    private Team homeTeam;
 
     @OneToOne
-    private Team awayTeamId;
+    private Team awayTeam;
 
     @OneToOne
-    private Stadium stadiumId;
+    private Stadium stadium;
 
     @OneToOne
-    private Referee refereeId;
+    private Referee referee;
 
-    public Match() {
-    }
-
-    public Match(Long idMatch, Date date, Date time, Team homeTeamId, Team awayTeamId, Stadium stadiumId, Referee refereeId) {
-        this.idMatch = idMatch;
-        this.date = date;
-        this.time = time;
-        this.homeTeamId = homeTeamId;
-        this.awayTeamId = awayTeamId;
-        this.stadiumId = stadiumId;
-        this.refereeId = refereeId;
-    }
 
     public Long getIdMatch() {
         return idMatch;
@@ -48,51 +37,51 @@ public class Match {
         this.idMatch = idMatch;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public Date getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
 
-    public Team getHomeTeamId() {
-        return homeTeamId;
+    public Team getHomeTeam() {
+        return homeTeam;
     }
 
-    public void setHomeTeamId(Team homeTeamId) {
-        this.homeTeamId = homeTeamId;
+    public void setHomeTeam(Team homeTeam) {
+        this.homeTeam = homeTeam;
     }
 
-    public Team getAwayTeamId() {
-        return awayTeamId;
+    public Team getAwayTeam() {
+        return awayTeam;
     }
 
-    public void setAwayTeamId(Team awayTeamId) {
-        this.awayTeamId = awayTeamId;
+    public void setAwayTeam(Team awayTeam) {
+        this.awayTeam = awayTeam;
     }
 
-    public Stadium getStadiumId() {
-        return stadiumId;
+    public Stadium getStadium() {
+        return stadium;
     }
 
-    public void setStadiumId(Stadium stadiumId) {
-        this.stadiumId = stadiumId;
+    public void setStadium(Stadium stadium) {
+        this.stadium = stadium;
     }
 
-    public Referee getRefereeId() {
-        return refereeId;
+    public Referee getReferee() {
+        return referee;
     }
 
-    public void setRefereeId(Referee refereeId) {
-        this.refereeId = refereeId;
+    public void setReferee(Referee referee) {
+        this.referee = referee;
     }
 }

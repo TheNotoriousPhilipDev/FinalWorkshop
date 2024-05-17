@@ -14,13 +14,35 @@ public class Stadium {
     private String city;
     private int capacity;
 
-    public Stadium() {
+    public Long getIdStadium() {
+        return idStadium;
     }
 
-    public Stadium(Long idStadium, String name, String city, int capacity) {
+    public void setIdStadium(Long idStadium) {
         this.idStadium = idStadium;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
         this.city = city;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 }
